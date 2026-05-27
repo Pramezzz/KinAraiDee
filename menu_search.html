@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Search</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+
+</div>
+<body>
+
+<div id="foodPopup" class="popup">
+    <div class="popup-box">
+        <h2 id="foodName"></h2>
+        <p id="foodDetail"></p>
+        <button class="popup-btn"
+            onclick="closePopup()">
+            ปิด
+        </button>
+    </div>
+</div>
+
+<nav>
+    <a href="index.html" class="logo">KinAraiDee</a>
+
+    <div class="menu-nav">
+        <a href="index.html">Home</a>
+        <a href="menu_search.html">Menu Search</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+<div id="bg-container"></div>
+
+<div class="menu-container">
+
+    <div class="top-search">
+        <input
+            type="text"
+            id="search"
+            placeholder="ค้นหาเมนู วัตถุดิบ เมนูที่อยากกิน..."
+        >
+    </div>
+
+    <div class="title-box">
+        <h1>ไม่รู้จะกินอะไร?</h1>
+        <p>ให้เราช่วยเลือกเมนูให้กับคุณ</p>
+    </div>
+    <div class="category-row">
+
+    <a href="#food1" class="category-btn">🍛 อาหารจานเดียว</a>
+    <a href="#food2" class="category-btn">🍜 เส้น</a>
+    <a href="#food3" class="category-btn">🥗 อาหารคลีน</a>
+    <a href="#food4" class="category-btn">🍰 ของหวาน</a>
+    <a href="#food5" class="category-btn">🥤 เครื่องดื่ม</a>
+
+    <button class="random-btn"
+        onclick="randomFood()">
+        🎲 สุ่มอาหาร
+    </button>
+    
+
+</div>
+<h2 class="recommend-title">
+    ⭐ เมนูแนะนำวันนี้
+</h2>
+
+<div class="cards" id="recommendCards"></div>
+
+<section id="food1">
+    <h2 class="section-title">🍛 อาหารจานเดียว</h2>
+    <div class="cards" id="food1Cards"></div>
+</section>
+
+<section id="food2">
+    <h2 class="section-title">🍜 เส้น</h2>
+    <div class="cards" id="food2Cards"></div>
+</section>
+
+<section id="food3">
+    <h2 class="section-title">🥗 อาหารคลีน</h2>
+    <div class="cards" id="food3Cards"></div>
+</section>
+
+<section id="food4">
+    <h2 class="section-title">🍰 ของหวาน</h2>
+    <div class="cards" id="food4Cards"></div>
+</section>
+
+<section id="food5">
+    <h2 class="section-title">🥤 เครื่องดื่ม</h2>
+    <div class="cards" id="food5Cards"></div>
+</section>
+</div>
+
+
+<div class="cards" id="results"></div>
+
+<footer>
+    Made by Pasit
+    <h1>Contact</h1>
+    <p>Email : preammana357@gmail.com</p>
+    <p>IG : prem1803zaa</p>
+
+</footer>
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+<script src="script.js"></script>
+
+</body>
+</html>
