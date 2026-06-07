@@ -296,7 +296,7 @@ function submitRating(){
 
     }
 
-    fetch("https://kinaraidee-1.onrender.com/rating", {
+    fetch("https://kinaraidee-3.onrender.com/rating", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
