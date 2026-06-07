@@ -7,7 +7,9 @@ app = Flask(__name__)
 CORS(
     app,
     origins=[
-        "https://kinaraideezzz.github.io"
+        "https://kinaraideezzz.github.io",
+        "http://127.0.0.1:5500",
+        "http://localhost:5500"
     ]
 )
 def init_db():
