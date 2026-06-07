@@ -296,19 +296,16 @@ function submitRating(){
 
     }
 
-    fetch(
-        "http://127.0.0.1:5000/rating",
-        {
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                rating:selectedRating,
-                time:new Date().toLocaleString()
-            })
-        }
-    )
+    fetch("https://kinaraidee-1.onrender.com/rating", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        rating: selectedRating,
+        time: new Date().toLocaleString()
+    })
+})
     .then(res => res.json())
     .then(data => {
 
