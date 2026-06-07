@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<nav>
+
+    <a href="index.html" class="logo">
+        KinAraiDee
+    </a>
+
+    <div class="hamburger"
+        id="hamburger"
+        onclick="toggleMenu()">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <div class="menu-nav"
+        id="mobileMenu">
+
+        <a href="index.html">Home</a>
+
+        <a href="menu_search.html">
+            Menu Search
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+</nav>
+<div id="bg-container"></div>
+<div class="profile-box">
+
+    <button class="slide-btn"
+        onclick="toggleProfile('p1')">
+
+        👤 Pasit ▼
+
+    </button>
+
+    <div class="slide-content" id="p1">
+
+        <p>ชื่อ : Pasit</p>
+        <p>ผู้พัฒนาเว็บไซต์ KinAraiDee</p>
+        <p>ชอบเขียนเว็บและออกแบบ UI</p>
+
+    </div>
+
+</div>
+
+<div class="profile-box">
+
+    <button class="slide-btn"
+        onclick="toggleProfile('p2')">
+
+        👤 ทีมงาน ▼
+
+    </button>
+
+    <div class="slide-content" id="p2">
+
+        <p>ช่วยออกแบบและทดสอบระบบ</p>
+        <p>ช่วยหาเมนูอาหาร</p>
+
+    </div>
+
+</div>
+    <div id="bg-container"></div>
+    <script src="script.js"></script>
+
+<footer>
+    Made by Pasit
+    <h1>Contact</h1>
+    <p>Email : preammana357@gmail.com</p>
+    <p>IG : prem1803zaa</p>
+
+</footer>
+
+</body>
+</html>
