@@ -27,8 +27,8 @@ window.register = async function() {
 
         const userCredential =
             await createUserWithEmailAndPassword(
-                email,
                 auth,
+                email,
                 password
             );
 
@@ -67,8 +67,8 @@ window.login = async function() {
 
         const userCredential =
         await signInWithEmailAndPassword(
-            email,
             auth,
+            email,
             password
         );
 
