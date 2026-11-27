@@ -35,7 +35,7 @@ async function loadFoodsFromExcel(url = "สำเนาของ_รายก�
             "หมวดหมู่":    mapCategory(row["ประเภทอาหาร"] || ""),
             "ประเภทอาหาร": row["ประเภทอาหาร"]  || "",
             "วัตถุดิบ":    row["วัตถุดิบ"]      || "-",
-            "รูปภาพ": (row["รูปภาพ"] || "food/default.jpg")
+            "รูปภาพ": (row["รูปภาพ"] || "food/.jpg")
             .replaceAll("\\", "/")
             .trim()
         }));
@@ -59,16 +59,6 @@ async function loadImagesLazy() {
         img.src = url;
     }
 }
-
-/* ดึง URL รูปจาก picsum seed (ไม่ต้อง API key) */
-function getFoodImageUrl(foodName, country) {
-    let seed = 0;
-    for (let i = 0; i < foodName.length; i++) seed += foodName.charCodeAt(i);
-    // บวก country เพื่อให้ seed หลากหลายขึ้น
-    for (let i = 0; i < country.length; i++) seed += country.charCodeAt(i) * 3;
-    return `https://picsum.photos/seed/food${seed}/400/250`;
-}
-
 
 /* แมปประเภทอาหาร */
 function mapCategory(type) {
