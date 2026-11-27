@@ -27,8 +27,8 @@ window.register = async function() {
 
         const userCredential =
             await createUserWithEmailAndPassword(
-                auth,
                 email,
+                auth,
                 password
             );
 
@@ -36,7 +36,7 @@ window.register = async function() {
             doc(db, "users", userCredential.user.uid),
             {
                 name,
-                email,
+                Email,
                 role: "user",   // 👈 ปกติเป็น user
                 createdAt: new Date()
             }
@@ -67,8 +67,8 @@ window.login = async function() {
 
         const userCredential =
         await signInWithEmailAndPassword(
-            auth,
             email,
+            auth,
             password
         );
 
