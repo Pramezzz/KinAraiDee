@@ -6,10 +6,6 @@ function safeQuery(selector){
    โหลดข้อมูลจาก Excel
 ========================= */
 
-let demoFoods = [];
-// แคชรูปภาพไว้ไม่ต้องโหลดซ้ำ
-const imgCache = {};
-
 async function fetchFoodImage(foodName, country) {
     const key = foodName;
     if (imgCache[key]) return imgCache[key];
@@ -22,30 +18,8 @@ async function fetchFoodImage(foodName, country) {
     const lang = countryMap[country] || "";
     const query = encodeURIComponent(`${lang} ${foodName} food`);
 
-    try {
-        const res = await fetch(
-            `https://api.unsplash.com/search/photos?query=${query}&per_page=1&orientation=landscape`,
-            { headers: { Authorization: "Client-ID YOUR_UNSPLASH_KEY" } }
-        );
         const data = await res.json();
-        const url = data?.results?.[0]?.urls?.small || getFallbackImg(foodName);
-        imgCache[key] = url;
-        return url;
-    } catch {
-        const url = getFallbackImg(foodName);
-        imgCache[key] = url;
-        return url;
-    }
 }
-
-// fallback: ใช้ picsum แบ่งตาม index เพื่อให้แต่ละเมนูได้รูปต่างกัน
-function getFallbackImg(foodName) {
-    let seed = 0;
-    for (let i = 0; i < foodName.length; i++) seed += foodName.charCodeAt(i);
-    return `https://picsum.photos/seed/${seed}/400/250`;
-}
-
-
 async function loadFoodsFromExcel(url = "สำเนาของ_รายการอาหาร.xlsx") {
     try {
         const res = await fetch(url);
